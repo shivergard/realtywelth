@@ -67,7 +67,7 @@
 
 					if(!empty($data)) 
 					{
-						$result=fundapi($url, $data,$method);
+						$result=fundapiupdate($url, $data,$method);
 						//print_r($result); 
 					} 
 				 	$sql="update ".REGISTERED_UESR." set Entity_Id='".$result->id."' where User_Id='".$_SESSION['userid']."'"; 
@@ -98,7 +98,7 @@
 						);
 						if(!empty($data)) 
 						{
-							$result=fundapi($url, $data,$method);
+							$result=fundapiupdate($url, $data,$method);
 							//print_r($result);
 						}
 						//$sql = "insert ".INVESTMENTS." set User_Id='".$_SESSION['userid']."',Project_Id='".$investingproject[0]['Project_Id']."',NoOfShare='".$noofshare."',Amount='".$amount."',AmoutPerShare='".$AmountPerShare."',Funding_Status='1',Date='".date('Y-m-d h:i:s')."',DigitalSignature='".$fundregister[0]['First_Name'].$fundregister[0]['Last_Name']."'";
